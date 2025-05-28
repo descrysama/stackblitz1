@@ -67,10 +67,10 @@ const HeroSection = () => {
           majestueuse des paysages à travers le monde.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="text-md px-8 bg-white text-black hover:bg-white/90">
+          <Button size="lg" className="text-md px-8 bg-white text-black hover:bg-white/90 w-full sm:w-auto">
             Explorer la galerie <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button size="lg" variant="outline" className="text-md px-8 text-white border-white hover:bg-white/10">
+          <Button size="lg" variant="outline" className="text-md px-8 text-white border-white hover:bg-white/10 w-full sm:w-auto">
             Découvrir les collections
           </Button>
         </div>

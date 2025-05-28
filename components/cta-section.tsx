@@ -22,7 +22,7 @@ const CtaSection = () => {
               className="w-full px-10 py-3 rounded-md border-primary-foreground/20 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-primary-foreground/30"
             />
           </div>
-          <Button className="whitespace-nowrap bg-primary-foreground text-primary hover:bg-primary-foreground/90 w-full sm:w-auto">
+          <Button className="whitespace-nowrap bg-white text-primary hover:bg-white/90 w-full sm:w-auto">
             S'inscrire
           </Button>
         </div>
