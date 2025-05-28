@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const backgroundImages = [
   "https://images.pexels.com/photos/640781/pexels-photo-640781.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -19,6 +20,7 @@ const backgroundImages = [
 
 const HeroSection = () => {
   const heroRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -67,10 +69,27 @@ const HeroSection = () => {
           majestueuse des paysages à travers le monde.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="text-md px-8 bg-white text-black hover:bg-white/90 w-full sm:w-auto">
+          <Button 
+            size="lg" 
+            className={cn(
+              "text-md px-8 w-full sm:w-auto",
+              theme === "dark" 
+                ? "bg-primary text-primary-foreground hover:bg-primary-light" 
+                : "bg-white text-black hover:bg-white/90"
+            )}
+          >
             Explorer la galerie <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-          <Button size="lg" variant="outline" className="text-md px-8 text-white border-white hover:bg-white/10 w-full sm:w-auto">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            className={cn(
+              "text-md px-8 w-full sm:w-auto",
+              theme === "dark"
+                ? "text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10"
+                : "text-white border-white hover:bg-white/10"
+            )}
+          >
             Découvrir les collections
           </Button>
         </div>
